@@ -7,3 +7,7 @@ function TarifaBase(){
     const tarifaBase = 620;
     return tarifaBase; 
 }
+const CargoFijo = function(){
+    const cargoFijo = 3500;
+    return cargoFijo;
+}
