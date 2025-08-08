@@ -30,3 +30,14 @@ const Total = () => {
     const total = (SupTotal() + ValorIva() + CargoFijo());
     return total;
 }
+
+function ImprimirFactura() {
+    console.log( `Consumo KWH: ${ConsumoKWH()}`)
+    console.log( `Tarifa Base: ${TarifaBase()}`)
+    console.log( `Cargo Fijo: ${CargoFijo()}`)      
+    console.log( `Subtotal: ${SupTotal()}`)
+    console.log( `IVA: ${ValorIva()}`)  
+    console.log( `Total: ${Total()}`)   
+    return `Factura impresa correctamente`;
+
+}
