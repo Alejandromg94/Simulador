@@ -15,3 +15,8 @@ const Iva = function(){
     const iva = 0.19;
     return iva;
 }
+
+const SupTotal  = () => {
+    const subtotal = (ConsumoKWH() * TarifaBase()) ;
+    return SupTotal;
+}
