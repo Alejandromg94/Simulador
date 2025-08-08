@@ -11,3 +11,7 @@ const CargoFijo = function(){
     const cargoFijo = 3500;
     return cargoFijo;
 }
+const Iva = function(){
+    const iva = 0.19;
+    return iva;
+}
