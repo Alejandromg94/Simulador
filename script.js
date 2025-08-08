@@ -25,3 +25,8 @@ const ValorIva = () => {
     const valorIva = (SupTotal() * Iva());
     return valorIva;
 }
+
+const Total = () => {
+    const total = (SupTotal() + ValorIva() + CargoFijo());
+    return total;
+}
