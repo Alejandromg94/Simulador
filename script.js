@@ -17,7 +17,7 @@ const Iva = function(){
 }
 
 const SupTotal  = () => {
-    const subtotal = (ConsumoKWH() * TarifaBase()) ;
+    const SupTotal = (ConsumoKWH() * TarifaBase()) ;
     return SupTotal;
 }
 
@@ -41,3 +41,5 @@ function ImprimirFactura() {
     return `Factura impresa correctamente`;
 
 }
+
+ImprimirFactura();
