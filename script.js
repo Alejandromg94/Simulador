@@ -20,3 +20,8 @@ const SupTotal  = () => {
     const subtotal = (ConsumoKWH() * TarifaBase()) ;
     return SupTotal;
 }
+
+const ValorIva = () => {
+    const valorIva = (SupTotal() * Iva());
+    return valorIva;
+}
