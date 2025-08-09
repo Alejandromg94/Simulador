@@ -1,48 +1,56 @@
-// FUNCION PARA CALCULAR CONSUMO KWH
-function ConsumoKWH(){
-    const consumoKWH = 410;
-    return consumoKWH;
+// FUNCIÓN PARA CALCULAR CONSUMO KWH
+function consumoKwh() {
+    const consumoKwh = 410;
+    return consumoKwh;
 }
-// FUNCION PARA CALCULAR TARIFA BASE
-function TarifaBase(){
+
+// FUNCIÓN PARA CALCULAR TARIFA BASE
+function tarifaBase() {
     const tarifaBase = 620;
-    return tarifaBase; 
+    return tarifaBase;
 }
-// FUNCION PARA CALCULAR CARGO FIJO
-const CargoFijo = function(){
+
+// FUNCIÓN PARA CALCULAR CARGO FIJO
+const cargoFijo = function() {
     const cargoFijo = 3500;
     return cargoFijo;
 }
-// FUNCION PARA CALCULAR IVA    
-const Iva = function(){
+
+// FUNCIÓN PARA CALCULAR IVA    
+const iva = function() {
     const iva = 0.19;
     return iva;
 }
-// FUNCION PARA CALCULAR SUBTOTAL
-const SupTotal  = () => {
-    const SupTotal = (ConsumoKWH() * TarifaBase()) ;
-    return SupTotal;
+
+// FUNCIÓN PARA CALCULAR SUBTOTAL
+const subtotal = () => {
+    const subtotal = (consumoKwh() * tarifaBase());
+    return subtotal;
 }
-// FUNCION PARA CALCULAR VALOR IVA
-const ValorIva = () => {
-    const valorIva = (SupTotal() * Iva());
+
+// FUNCIÓN PARA CALCULAR VALOR IVA
+const valorIva = () => {
+    const valorIva = (subtotal() * iva());
     return valorIva;
 }
-// FUNCION PARA CALCULAR TOTAL A PAGAR
-const Total = () => {
-    const total = (SupTotal() + ValorIva() + CargoFijo());
+
+// FUNCIÓN PARA CALCULAR TOTAL A PAGAR
+const total = () => {
+    const total = (subtotal() + valorIva() + cargoFijo());
     return total;
 }
-// FUNCION PARA IMPRIMIR FACTURA
-function ImprimirFactura() {
-    console.log( `********** FACTURA **********`)
-    console.log( `Consumo KWH: ${ConsumoKWH()}`)
-    console.log( `Tarifa Base: ${TarifaBase()}`)
-    console.log( `Cargo Fijo: ${CargoFijo()}`)      
-    console.log( `Subtotal: ${SupTotal()}`)
-    console.log( `IVA: ${ValorIva()}`)  
-    console.log( `Total: ${Total()}`)  
-    return `Factura impresa correctamente`;
+
+// FUNCIÓN PARA IMPRIMIR FACTURA
+function imprimirFactura() {
+    console.log(`********** FACTURA **********`);
+    console.log(`Consumo KWH: ${consumoKwh()}`);
+    console.log(`Tarifa Base: ${tarifaBase()}`);
+    console.log(`Cargo Fijo: ${cargoFijo()}`);      
+    console.log(`Subtotal: ${subtotal()}`);
+    console.log(`IVA: ${valorIva()}`);  
+    console.log(`Total: ${total()}`);  
+    return "Factura impresa correctamente";
 }
+
 // IMPRIMIR FACTURA
-ImprimirFactura();
+imprimirFactura();
